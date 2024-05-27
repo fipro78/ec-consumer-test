@@ -21,6 +21,7 @@
   <module>ec-consumer-osgi</module>
   <module>ec-consumer-eclipse-target</module>
   <module>ec-consumer-eclipse</module>
+  <module>ec-consumer-eclipse-product</module>
   </modules>
 
   <dependencyManagement>

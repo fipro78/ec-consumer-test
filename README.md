@@ -51,3 +51,7 @@ Run the OSGi application example
 ```
 java -Djava.util.logging.config.file=osgi/logging.properties -jar osgi/app.jar Mohammad Donald Hiroshi Craig Sirisha Nikhil
 ```
+
+## Eclipse
+
+In the _result_ folder you will also find the _eclipse_ subfolder, that contains subfolders for the main operating systems. To test that Eclipse Collections also work in an Eclipse applications, move to the folder for your operating system and start the application via the **eclipse** executable. A simple user interface starts up that lets you enter space separated values in the text field.

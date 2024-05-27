@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="ec-consumer-eclipse" id="ec-consumer-eclipse.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" type="mixed" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="ec-consumer-eclipse" uid="ec-consumer-eclipse-app" id="ec-consumer-eclipse.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" type="mixed" includeLaunchers="true" autoIncludeRequirements="true">
 
    <configIni use="default">
    </configIni>
