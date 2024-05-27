@@ -1,0 +1,35 @@
+index: target/index.xml;name="app"
+
+-standalone: ${index}
+	
+-runfw: org.eclipse.osgi
+-runee: JavaSE-17
+
+-resolve.effective: active;skip:="osgi.service"
+    
+-includeresource: logging.properties
+-runvm: -Djava.util.logging.config.file=logging.properties
+    
+-runrequires: \
+	bnd.identity;id=ec-consumer-osgi,\
+	bnd.identity;id='org.apache.aries.spifly.dynamic.bundle',\
+	bnd.identity;id='org.eclipse.collections.impl'
+	
+// ensure that the bundle with the immediate component is started last
+-runbundles+: \
+    ec-consumer-osgi;startlevel=4,\
+    *;startlevel=1
+-runbundles: \
+	ec-consumer;version='[1.0.0,1.0.1)',\
+	ec-consumer-osgi;version='[1.0.0,1.0.1)',\
+	org.apache.aries.spifly.dynamic.bundle;version='[1.3.7,1.3.8)',\
+	org.apache.felix.scr;version='[2.2.0,2.2.1)',\
+	org.eclipse.collections.api;version='[12.0.0,12.0.1)',\
+	org.eclipse.collections.impl;version='[12.0.0,12.0.1)',\
+	org.objectweb.asm;version='[9.6.0,9.6.1)',\
+	org.objectweb.asm.commons;version='[9.6.0,9.6.1)',\
+	org.objectweb.asm.tree;version='[9.6.0,9.6.1)',\
+	org.objectweb.asm.tree.analysis;version='[9.6.0,9.6.1)',\
+	org.objectweb.asm.util;version='[9.6.0,9.6.1)',\
+	org.osgi.util.function;version='[1.2.0,1.2.1)',\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)'
