@@ -33,7 +33,7 @@ It is also possible to create a custom JRE using `jlink`.
 To build a custom JRE from the modulepath, execute the following command:
 
 ```
-jlink --add-modules=ALL-MODULE-PATH --module-path jars --no-header-files --no-man-pages --output custom_jre
+jlink --add-modules=ALL-MODULE-PATH --module-path jars --no-header-files --no-man-pages --ignore-signing-information --output custom_jre
 ```
 
 Run the example by using the created custom JRE
